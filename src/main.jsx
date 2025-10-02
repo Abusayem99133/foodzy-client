@@ -7,6 +7,8 @@ import { StrictMode } from "react";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <div className="max-w-[1910px] h-screen mx-auto">
+      <RouterProvider router={router} />
+    </div>
   </StrictMode>
 );

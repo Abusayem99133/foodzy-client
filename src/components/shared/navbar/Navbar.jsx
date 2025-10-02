@@ -1,3 +1,4 @@
+import { HiMiniChevronDown } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -8,23 +9,38 @@ const Navbar = () => {
       </li>
 
       <li>
-        <Link>Category</Link>
+        <Link>
+          Category
+          <HiMiniChevronDown />
+        </Link>
       </li>
 
       <li>
-        <Link>Products</Link>
+        <Link>
+          Products
+          <HiMiniChevronDown />
+        </Link>
       </li>
 
       <li>
-        <Link>Pages</Link>
+        <Link>
+          Pages
+          <HiMiniChevronDown />
+        </Link>
       </li>
 
       <li>
-        <Link>Blog</Link>
+        <Link>
+          Blog
+          <HiMiniChevronDown />
+        </Link>
       </li>
 
       <li>
-        <Link>Elements</Link>
+        <Link>
+          Elements
+          <HiMiniChevronDown />
+        </Link>
       </li>
     </>
   );
@@ -63,7 +79,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <span>+880 - 1814082602</span>
         </div>
       </div>
     </div>
