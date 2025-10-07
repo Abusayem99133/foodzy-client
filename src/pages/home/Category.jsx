@@ -29,7 +29,7 @@ const categories = [
   },
 ];
 
-const Categories = () => {
+const Category = () => {
   return (
     <section className="py-16 text-center bg-white">
       <h4 className="text-red-500 font-semibold uppercase tracking-widest mb-2">
@@ -57,4 +57,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default Category;
