@@ -1,5 +1,5 @@
 import HeroSection from "./HeroSection";
-import PopulerCategories from"./PopulerCategories"
+import PopulerCategories from"./PopularCategories"
 const Home = () => {
   return (
     <div>
