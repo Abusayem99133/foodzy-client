@@ -9,12 +9,12 @@ const categories = [
   },
   {
     name: "Break Fast",
-    count: "12 break fast",
+    count: "17 break fast",
     img: "https://cdn-icons-png.flaticon.com/512/2921/2921820.png",
   },
   {
     name: "Dessert",
-    count: "48 dessert",
+    count: "58 dessert",
     img: "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
   },
   {
