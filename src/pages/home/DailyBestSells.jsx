@@ -13,7 +13,7 @@ const DailyBestSells = () => {
   const products = [
     {
       id: 1,
-      tag: "Save 35%",
+      tag: "Save 55%",
       name: "All Natural Italian-Style Chicken Meatballs",
       price: 238.85,
       oldPrice: 245.8,
