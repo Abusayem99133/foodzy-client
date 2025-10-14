@@ -1,12 +1,14 @@
 import HeroSection from "./HeroSection";
-import Category from "./Category"
-import DailyBestSells from "./DailyBestSells"
+import Category from "./Category";
+import DailyBestSells from "./DailyBestSells";
+import OurMenu from "./OurMenu";
 const Home = () => {
   return (
     <div>
       <HeroSection />
       <Category />
-      <DailyBestSells/>
+      <DailyBestSells />
+      <OurMenu />
     </div>
   );
 };
