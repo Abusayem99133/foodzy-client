@@ -79,7 +79,9 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
         <div className="navbar-end">
-          <span>+880 - 1814082602</span>
+          <a className="btn cursor-pointer" href={`tel:${+88018 - 14082602}`}>
+            Call Now
+          </a>
         </div>
       </div>
     </div>
