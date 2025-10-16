@@ -1,5 +1,6 @@
 import { HiMiniChevronDown } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import SubNavbar from "./SubNavbar";
 
 const Navbar = () => {
   const navItems = (
@@ -73,7 +74,7 @@ const Navbar = () => {
               {navItems}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl uppercase">Foodzy</a>
+          {/* <a className="btn btn-ghost text-xl uppercase">Foodzy</a> */}
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
@@ -84,6 +85,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      <SubNavbar />
     </div>
   );
 };
