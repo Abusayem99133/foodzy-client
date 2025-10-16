@@ -1,18 +1,16 @@
+import logo from "../../../assets/banner/logo.png";
 const SubNavbar = () => {
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
-        <div className="dropdown dropdown-end">
+        <div className="dropdown dropdown-start">
           <div
             tabIndex={0}
             role="button"
             className="btn btn-ghost btn-circle avatar"
           >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-              />
+            <div className=" rounded-full">
+              <img alt="logo" src={logo} />
             </div>
           </div>
           <ul
@@ -33,11 +31,11 @@ const SubNavbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-1">
+        <div className=" flex-1">
           <div>
-            <a className="btn btn-ghost font-extrabold text-[24px]">Foodzy</a>
-            <span>A Treasure of Tastes</span>
+            <a className="font-extrabold text-[24px] flex-col">Foodzy</a>
           </div>
+          <span className="font-semibold text-sm">A Treasure of Tastes</span>
         </div>
         <div className="flex gap-2">
           <input
@@ -49,8 +47,6 @@ const SubNavbar = () => {
         <div>
           <h1>Account</h1>
         </div>
-        <h1>Account</h1>
-        <h1>Account</h1>
       </div>
     </div>
   );
