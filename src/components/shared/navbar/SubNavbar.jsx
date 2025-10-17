@@ -24,7 +24,7 @@ const SubNavbar = () => {
               </a>
             </li>
             <li>
-              <a>Settings</a>
+              <a>Setting</a>
             </li>
             <li>
               <a>Logout</a>
