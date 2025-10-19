@@ -47,6 +47,7 @@ const SubNavbar = () => {
         <div>
           <h1>Accounts</h1>
         </div>
+        <div>navitem</div>
       </div>
     </div>
   );
