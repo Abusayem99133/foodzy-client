@@ -39,7 +39,7 @@ const SubNavbar = () => {
           </div>
         </div>
         {/* div 2 */}
-        <div>search bar</div>
+        <div>search</div>
         {/* div 3 */}
         <div>login</div>
       </div>
