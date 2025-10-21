@@ -41,7 +41,7 @@ const SubNavbar = () => {
         {/* div 2 */}
         <div>search bar</div>
         {/* div 3 */}
-        <div>button</div>
+        <div>login</div>
       </div>
     </div>
   );
