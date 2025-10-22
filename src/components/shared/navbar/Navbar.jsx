@@ -18,7 +18,7 @@ const Navbar = () => {
 
       <li>
         <Link>
-          Products
+          Product
           <HiMiniChevronDown />
         </Link>
       </li>
