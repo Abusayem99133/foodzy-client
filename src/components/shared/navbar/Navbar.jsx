@@ -11,14 +11,14 @@ const Navbar = () => {
 
       <li>
         <Link>
-          Category
+          Categorys
           <HiMiniChevronDown />
         </Link>
       </li>
 
       <li>
         <Link>
-          Product
+          Products
           <HiMiniChevronDown />
         </Link>
       </li>
