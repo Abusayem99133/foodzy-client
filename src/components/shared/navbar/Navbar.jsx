@@ -11,7 +11,7 @@ const Navbar = () => {
 
       <li>
         <Link>
-          Category
+          Categorys
           <HiMiniChevronDown />
         </Link>
       </li>

@@ -41,33 +41,9 @@ const SubNavbar = () => {
           </div>
         </div>
         {/* div 2 */}
-        <div className="flex items-center justify-between bg-white border border-green-300 rounded-xl p-1 md:p-3 shadow-sm w-full max-w-xl mx-auto">
-          {/* Search Input */}
-          <div className="flex items-center gap-2 flex-grow">
-            <input
-              type="search"
-              placeholder="Search..."
-              required
-              className="w-full outline-none border-none bg-transparent text-gray-700 placeholder-gray-400"
-            />
-          </div>
-
-          {/* Category Dropdown */}
-          <div className="flex items-center border-l border-green-200 pl-3 pr-2 gap-1 cursor-pointer">
-            <h3 className="text-sm md:text-base text-gray-700">
-              All Categories
-            </h3>
-            <HiMiniChevronDown className="text-green-500 text-lg" />
-          </div>
-
-          {/* Search Icon */}
-          <button className="ml-2 bg-green-500 hover:bg-green-600 text-white p-2 rounded-lg transition-colors">
-            <IoSearch className="text-xl" />
-          </button>
-        </div>
-
+        <div>search</div>
         {/* div 3 */}
-        <div>button</div>
+        <div>login</div>
       </div>
     </div>
   );
