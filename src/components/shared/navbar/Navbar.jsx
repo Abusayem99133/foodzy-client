@@ -89,8 +89,8 @@ const Navbar = () => {
 
           {/* RIGHT */}
           <div className="navbar-end">
-            <a className="btn cursor-pointer" href="tel:+8801814082602">
-              Call Now
+            <a className="cursor-pointer" href="tel:+8801814082602">
+              ( +88 ) 01814 - 082602
             </a>
           </div>
         </div>
