@@ -47,16 +47,12 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="bg-base-100 shadow-sm w-full">
-        <div className="navbar max-w-[1350px] mx-auto px-4">
+      <div className="bg-[#FFFFFF] drop-shadow-sm  w-full">
+        <div className="navbar max-w-[1350px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           {/* LEFT */}
-          <div className="navbar-start">
+          <div className="navbar-start lg:hidden">
             <div className="dropdown">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost lg:hidden"
-              >
+              <div tabIndex={0} role="button" className="btn btn-ghost ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -75,7 +71,7 @@ const Navbar = () => {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-200 rounded-box mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-200 rounded-box mt-3 w-52 p-2 shadow z-[999]"
               >
                 {navItems}
               </ul>
@@ -84,13 +80,18 @@ const Navbar = () => {
 
           {/* CENTER */}
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">{navItems}</ul>
+            <ul className="menu menu-horizontal px-1 text-sm xl:text-base">
+              {navItems}
+            </ul>
           </div>
 
           {/* RIGHT */}
           <div className="navbar-end">
-            <a className="cursor-pointer" href="tel:+8801814082602">
-              ( +88 ) 01814 - 082602
+            <a
+              className="cursor-pointer text-sm sm:text-base font-medium whitespace-nowrap"
+              href="tel:+8801814082602"
+            >
+              (+88) 01814 - 082602
             </a>
           </div>
         </div>
