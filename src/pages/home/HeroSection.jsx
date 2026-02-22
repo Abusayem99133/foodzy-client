@@ -16,7 +16,7 @@ const HeroSection = () => {
         ></div>
         <div className=" bg-black/10"></div>
 
-        <div className="hero-content w-full flex flex-col lg:flex-row items-center justify-between text-neutral-content px-4 ">
+        <div className="hero-content w-full flex flex-col-reverse lg:flex-row items-center justify-between text-neutral-content px-4 ">
           {/* LEFT CONTENT */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
             {/* <div className="  hero-overlay"></div> */}
