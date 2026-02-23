@@ -1,6 +1,6 @@
-
 import React, { useState } from "react";
-
+import bestSell from "../../assets/banner/best-sell-main.png";
+import buySell1 from "../../assets/banner/buy-sell-1.jpg";
 const DailyBestSells = () => {
   const [activeTab, setActiveTab] = useState("featured");
 
@@ -18,7 +18,7 @@ const DailyBestSells = () => {
       price: 238.85,
       oldPrice: 245.8,
       sale: "Sold: 90/120",
-      img: "https://i.ibb.co/djsXbKk/product1.png",
+      img: `${buySell1}`,
     },
     {
       id: 2,
@@ -74,17 +74,22 @@ const DailyBestSells = () => {
       </div>
 
       {/* Content */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+      <div className="flex w-full gap-8">
         {/* Left Banner */}
-        <div className="col-span-1 bg-[url('https://i.ibb.co/yyY5whV/banner-bg.jpg')] bg-cover bg-center rounded-2xl flex flex-col justify-center p-6 text-white">
+        <div
+          className="w-7/12  col-span-1 bg-cover bg-center rounded-2xl flex flex-col justify-center p-6 text-white"
+          style={{ backgroundImage: `url(${bestSell})` }}
+        >
           <h3 className="text-2xl font-semibold leading-snug">
             Bring nature into your home
           </h3>
-          <button className="btn btn-error mt-4 w-fit">Shop Now</button>
+          <button className="btn bg-[#F53E32] outline-none mt-4 w-fit">
+            Shop Now
+          </button>
         </div>
 
         {/* Product Cards */}
-        <div className="col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
           {products.map((p) => (
             <div
               key={p.id}
@@ -105,7 +110,9 @@ const DailyBestSells = () => {
                   ${p.oldPrice}
                 </p>
                 <p className="text-xs text-gray-500">{p.sale}</p>
-                <button className="btn btn-error w-full mt-2">Add To Cart</button>
+                <button className="btn btn-error w-full mt-2">
+                  Add To Cart
+                </button>
               </div>
             </div>
           ))}
