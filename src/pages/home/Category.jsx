@@ -1,31 +1,34 @@
-
 import React from "react";
-
+import png1 from "../../assets/bestSeller/pngwing.png";
+import png2 from "../../assets/bestSeller/pngwing 2.png";
+import png3 from "../../assets/bestSeller/pngwing 3.png";
+import png4 from "../../assets/bestSeller/pngwing 4.png";
+import png5 from "../../assets/bestSeller/pngwing 5.png";
 const categories = [
   {
     name: "Main Dish",
     count: "86 dishes",
-    img: "https://cdn-icons-png.flaticon.com/512/1046/1046784.png",
+    img: `${png1}`,
   },
   {
     name: "Break Fast",
-    count: "17 break fast",
-    img: "https://cdn-icons-png.flaticon.com/512/2921/2921820.png",
+    count: "15 break fast",
+    img: `${png2}`,
   },
   {
     name: "Dessert",
-    count: "58 dessert",
-    img: "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
+    count: "48 dessert",
+    img: `${png3}`,
   },
   {
     name: "Browse All",
     count: "255 Items",
-    img: "https://cdn-icons-png.flaticon.com/512/1046/1046786.png",
+    img: `${png4}`,
   },
   {
     name: "Breakfast Food",
     count: "205 Items",
-    img: "https://cdn-icons-png.flaticon.com/512/3480/3480521.png",
+    img: `${png5}`,
   },
 ];
 
@@ -44,7 +47,11 @@ const Category = () => {
             className="card w-44 bg-base-100 shadow-md hover:shadow-lg transition-all duration-300"
           >
             <figure className="px-6 pt-6">
-              <img src={cat.img} alt={cat.name} className="w-16 h-16 object-contain" />
+              <img
+                src={cat.img}
+                alt={cat.name}
+                className="w-16 h-16 object-contain"
+              />
             </figure>
             <div className="card-body p-4 text-center">
               <h3 className="text-lg font-semibold">{cat.name}</h3>

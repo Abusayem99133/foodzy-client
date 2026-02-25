@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import bestSell from "../../assets/banner/best-sell-main.png";
-import buySell1 from "../../assets/banner/buy-sell-1.jpg";
+import bestSell from "../../assets/bestSeller/daily/best-sell-main.png";
+import buySell1 from "../../assets/bestSeller/daily/buy-sell-1.jpg";
 const DailyBestSells = () => {
   const [activeTab, setActiveTab] = useState("featured");
 
@@ -13,7 +13,8 @@ const DailyBestSells = () => {
   const products = [
     {
       id: 1,
-      tag: "Save 55%",
+      status: "Save 55%",
+      subName: "Hodo Foods",
       name: "All Natural Italian-Style Chicken Meatballs",
       price: 238.85,
       oldPrice: 245.8,
@@ -22,7 +23,8 @@ const DailyBestSells = () => {
     },
     {
       id: 2,
-      tag: "Sale",
+      status: "Sale",
+      subName: "Hodo Foods",
       name: "Angie’s Boomchickapop Sweet and womnies",
       price: 238.85,
       oldPrice: 245.8,
@@ -31,7 +33,8 @@ const DailyBestSells = () => {
     },
     {
       id: 3,
-      tag: "Best sale",
+      status: "Best sale",
+      subName: "Hodo Foods",
       name: "Foster Farms Takeout Crispy Classic",
       price: 238.85,
       oldPrice: 245.8,
@@ -40,7 +43,8 @@ const DailyBestSells = () => {
     },
     {
       id: 4,
-      tag: "Save 32%",
+      status: "Save 32%",
+      subName: "Hodo Foods",
       name: "Blue Diamond Almonds Lightly Salted",
       price: 238.85,
       oldPrice: 245.8,
@@ -48,7 +52,31 @@ const DailyBestSells = () => {
       img: "https://i.ibb.co/1G6Ns7H/product4.png",
     },
   ];
+  const getPercentage = (status) => {
+    const match = status.match(/\d+/);
+    return match ? parseInt(match[0]) : 0;
+  };
+  const getBadgeColor = (status) => {
+    const percentage = getPercentage(status);
 
+    if (status.toLowerCase() === "best sale") {
+      return "bg-purple-600 text-white";
+    }
+
+    if (percentage >= 50) {
+      return "bg-green-600 text-white";
+    }
+
+    if (percentage >= 30) {
+      return "bg-yellow-500 text-black";
+    }
+
+    if (status.toLowerCase() === "sale") {
+      return "bg-red-500 text-white";
+    }
+
+    return "bg-gray-400 text-black";
+  };
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       {/* Header */}
@@ -95,7 +123,7 @@ const DailyBestSells = () => {
               key={p.id}
               className="card bg-base-100 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition"
             >
-              <figure className="px-4 pt-4">
+              <figure className="px-4 pt-4 absolute">
                 <img
                   src={p.img}
                   alt={p.name}
@@ -103,7 +131,11 @@ const DailyBestSells = () => {
                 />
               </figure>
               <div className="card-body items-center text-center">
-                <span className="badge badge-success mb-2">{p.tag}</span>
+                <span
+                  className={`py-2 px-3 rounded-tl-2xl rounded-br-2xl border badge-success relative right-7 -mt-6 ${getBadgeColor(p.status)}`}
+                >
+                  {p.status}
+                </span>
                 <h2 className="card-title text-sm font-semibold">{p.name}</h2>
                 <p className="text-green-500 font-semibold">${p.price}</p>
                 <p className="text-gray-400 line-through text-sm">
