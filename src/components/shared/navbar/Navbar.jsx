@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="bg-[#FFFFFF] drop-shadow-sm  w-full">
-        <div className="navbar max-w-[1350px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="navbar max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           {/* LEFT */}
           <div className="navbar-start lg:hidden">
             <div className="dropdown">

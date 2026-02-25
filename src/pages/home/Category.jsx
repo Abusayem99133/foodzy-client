@@ -40,11 +40,11 @@ const Category = () => {
       </h4>
       <h2 className="text-3xl font-bold mb-10">Popular Categories</h2>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex justify-center gap-6">
         {categories.map((cat, i) => (
           <div
             key={i}
-            className="card w-44 bg-base-100 shadow-md hover:shadow-lg transition-all duration-300"
+            className="card w-60 md:w-44 bg-base-100 shadow-md hover:shadow-lg transition-all duration-300"
           >
             <figure className="px-6 pt-6">
               <img

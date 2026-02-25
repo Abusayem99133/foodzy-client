@@ -85,7 +85,7 @@ const DailyBestSells = () => {
     return "bg-gray-400 text-black";
   };
   return (
-    <div className="max-w-[1350px] mx-auto px-4 py-10">
+    <div className="max-w-[1610px] mx-auto px-4 py-10">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
         {/* Title */}
@@ -133,6 +133,12 @@ const DailyBestSells = () => {
               key={p.id}
               className="relative card bg-base-100 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition p-4 flex flex-col"
             >
+              <span
+                className={`bg-green-500 text-white px-3 py-1 rounded-tl-3xl rounded-br-4xl w-24 -mt-3.5 -ml-4 ${getBadgeColor(p?.status)}`}
+              >
+                {p?.status}
+              </span>
+
               {/* Image */}
               <figure className="flex justify-center">
                 <img
@@ -165,12 +171,17 @@ const DailyBestSells = () => {
                       </p>
                     )}
                   </div>
-
+                  {/* <progress
+                    className="progress progress-error w-full mt-4"
+                    value={p?.sale}
+                    max="
+                    100"
+                  ></progress> */}
                   <p className="text-xs text-gray-500">{p.sale}</p>
                 </div>
 
                 {/* Button always at bottom */}
-                <button className="btn btn-error w-full mt-4">
+                <button className="py-1 md:py-2 px-3  bg-[#F53E32] rounded-md  font-bold text-[#FFFFFF] w-full mt-4">
                   Add To Cart
                 </button>
               </div>

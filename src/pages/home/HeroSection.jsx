@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <div className="w-full">
       <div
-        className="hero min-h-screen bg-cover bg-center bg-no-repeat"
+        className="hero min-h-screen bg-cover bg-center bg-no-repeat "
         style={{ backgroundImage: `url(${bgHero})` }}
       >
         <div className="hero-overlay bg-black/40"></div>

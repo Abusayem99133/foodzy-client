@@ -9,7 +9,7 @@ import {
 const SubNavbar = () => {
   return (
     <div className="w-full bg-white">
-      <div className="max-w-[1350px] mx-auto px-3 sm:px-4 md:px-6 py-3 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
+      <div className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 py-3 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
         {/* TOP ROW (Logo + Icons for Mobile) */}
         <div className="w-full flex justify-between items-center lg:w-auto">
           {/* LEFT (Logo Section) */}
