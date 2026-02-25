@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import bestSell from "../../assets/bestSeller/daily/best-sell-main.png";
 import buySell1 from "../../assets/bestSeller/daily/buy-sell-1.jpg";
+import buySell2 from "../../assets/bestSeller/daily/→ product-2-1.jpg.png";
+import buySell3 from "../../assets/bestSeller/daily/→ product-3-1.jpg.png";
+import buySell4 from "../../assets/bestSeller/daily/→ product-4-1.jpg.png";
 const DailyBestSells = () => {
   const [activeTab, setActiveTab] = useState("featured");
 
@@ -29,7 +32,7 @@ const DailyBestSells = () => {
       price: 238.85,
       oldPrice: 245.8,
       sale: "Sold: 90/120",
-      img: "https://i.ibb.co/wRDBr2x/product2.png",
+      img: `${buySell2}`,
     },
     {
       id: 3,
@@ -39,7 +42,7 @@ const DailyBestSells = () => {
       price: 238.85,
       oldPrice: 245.8,
       sale: "Sold: 90/120",
-      img: "https://i.ibb.co/hZ6qdwc/product3.png",
+      img: `${buySell3}`,
     },
     {
       id: 4,
@@ -49,7 +52,7 @@ const DailyBestSells = () => {
       price: 238.85,
       oldPrice: 245.8,
       sale: "Sold: 90/120",
-      img: "https://i.ibb.co/1G6Ns7H/product4.png",
+      img: `${buySell4}`,
     },
   ];
   const getPercentage = (status) => {
@@ -78,19 +81,22 @@ const DailyBestSells = () => {
     return "bg-gray-400 text-black";
   };
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div className="max-w-[1350px] mx-auto px-4 py-10">
       {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-semibold">Daily Best Sells</h2>
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+        {/* Title */}
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+          Daily Best Sells
+        </h2>
 
         {/* Tabs */}
-        <div className="flex space-x-3">
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           {tabs.map((tab) => (
             <button
               key={tab.key}
-              className={`px-3 py-1 rounded-md text-sm font-medium ${
+              className={`px-3 sm:px-4 py-1.5 rounded-md text-xs sm:text-sm font-medium transition ${
                 activeTab === tab.key
-                  ? "bg-green-500 text-white"
+                  ? "bg-green-500 text-white shadow"
                   : "bg-base-200 text-gray-600 hover:bg-green-100"
               }`}
               onClick={() => setActiveTab(tab.key)}
@@ -102,13 +108,13 @@ const DailyBestSells = () => {
       </div>
 
       {/* Content */}
-      <div className="flex w-full gap-8">
+      <div className="w-full flex flex-col lg:flex-row gap-8">
         {/* Left Banner */}
         <div
-          className="w-7/12  col-span-1 bg-cover bg-center rounded-2xl flex flex-col justify-center p-6 text-white"
+          className="w-full lg:w-4/12 bg-cover bg-center rounded-2xl p-6 text-white min-h-[300px] flex flex-col justify-center"
           style={{ backgroundImage: `url(${bestSell})` }}
         >
-          <h3 className="text-2xl font-semibold leading-snug">
+          <h3 className="text-xl md:text-2xl font-semibold leading-snug">
             Bring nature into your home
           </h3>
           <button className="btn bg-[#F53E32] outline-none mt-4 w-fit">
@@ -117,31 +123,37 @@ const DailyBestSells = () => {
         </div>
 
         {/* Product Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
+        <div className="w-full lg:w-8/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 gap-6">
           {products.map((p) => (
             <div
               key={p.id}
-              className="card bg-base-100 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition"
+              className="relative card bg-base-100 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition p-4"
             >
-              <figure className="px-4 pt-4 absolute">
+              <figure className="flex justify-center">
                 <img
                   src={p.img}
                   alt={p.name}
-                  className="rounded-xl w-32 h-32 object-contain"
+                  className="rounded-xl w-28 h-28 md:w-32 md:h-32 object-contain"
                 />
               </figure>
-              <div className="card-body items-center text-center">
-                <span
-                  className={`py-2 px-3 rounded-tl-2xl rounded-br-2xl border badge-success relative right-7 -mt-6 ${getBadgeColor(p.status)}`}
-                >
-                  {p.status}
-                </span>
-                <h2 className="card-title text-sm font-semibold">{p.name}</h2>
+
+              <span className="text-gray-400 font-normal text-xs mt-3">
+                {p?.subName}
+              </span>
+
+              <div className="card-body items-center text-center p-2">
+                <h2 className="card-title text-sm md:text-base font-bold">
+                  {p.name}
+                </h2>
+
                 <p className="text-green-500 font-semibold">${p.price}</p>
+
                 <p className="text-gray-400 line-through text-sm">
                   ${p.oldPrice}
                 </p>
+
                 <p className="text-xs text-gray-500">{p.sale}</p>
+
                 <button className="btn btn-error w-full mt-2">
                   Add To Cart
                 </button>
