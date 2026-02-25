@@ -18,21 +18,23 @@ const DailyBestSells = () => {
       id: 1,
       status: "Save 55%",
       subName: "Hodo Foods",
-      name: "All Natural Italian-Style Chicken Meatballs",
+      name: "All Natural Italian Chicken Meatballs",
       price: 238.85,
       oldPrice: 245.8,
       sale: "Sold: 90/120",
       img: `${buySell1}`,
+      rating: "2",
     },
     {
       id: 2,
       status: "Sale",
       subName: "Hodo Foods",
-      name: "Angie’s Boomchickapop Sweet and womnies",
+      name: "Angie’s Boom chicka pop, sweet & yummy",
       price: 238.85,
       oldPrice: 245.8,
       sale: "Sold: 90/120",
       img: `${buySell2}`,
+      rating: "5",
     },
     {
       id: 3,
@@ -43,6 +45,7 @@ const DailyBestSells = () => {
       oldPrice: 245.8,
       sale: "Sold: 90/120",
       img: `${buySell3}`,
+      rating: "2",
     },
     {
       id: 4,
@@ -53,6 +56,7 @@ const DailyBestSells = () => {
       oldPrice: 245.8,
       sale: "Sold: 90/120",
       img: `${buySell4}`,
+      rating: "4",
     },
   ];
   const getPercentage = (status) => {
@@ -127,8 +131,9 @@ const DailyBestSells = () => {
           {products.map((p) => (
             <div
               key={p.id}
-              className="relative card bg-base-100 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition p-4"
+              className="relative card bg-base-100 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition p-4 flex flex-col"
             >
+              {/* Image */}
               <figure className="flex justify-center">
                 <img
                   src={p.img}
@@ -137,24 +142,35 @@ const DailyBestSells = () => {
                 />
               </figure>
 
+              {/* Subname */}
               <span className="text-gray-400 font-normal text-xs mt-3">
                 {p?.subName}
               </span>
 
-              <div className="card-body items-center text-center p-2">
-                <h2 className="card-title text-sm md:text-base font-bold">
-                  {p.name}
-                </h2>
+              {/* Main content */}
+              <div className="flex-1 flex flex-col justify-between mt-2">
+                <div>
+                  <h2 className="card-title text-sm md:text-base font-bold">
+                    {p?.name}
+                  </h2>
+                  <span>{p?.rating}</span>
 
-                <p className="text-green-500 font-semibold">${p.price}</p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <p className="text-green-500 font-bold text-[18px]">
+                      ${p?.price}
+                    </p>
+                    {p.oldPrice && (
+                      <p className="text-gray-400 line-through font-bold text-sm">
+                        ${p.oldPrice}
+                      </p>
+                    )}
+                  </div>
 
-                <p className="text-gray-400 line-through text-sm">
-                  ${p.oldPrice}
-                </p>
+                  <p className="text-xs text-gray-500">{p.sale}</p>
+                </div>
 
-                <p className="text-xs text-gray-500">{p.sale}</p>
-
-                <button className="btn btn-error w-full mt-2">
+                {/* Button always at bottom */}
+                <button className="btn btn-error w-full mt-4">
                   Add To Cart
                 </button>
               </div>
