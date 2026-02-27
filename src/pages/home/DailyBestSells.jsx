@@ -181,7 +181,7 @@ const DailyBestSells = () => {
                 </div>
 
                 {/* Button always at bottom */}
-                <button className="py-1 md:py-2 px-3  bg-[#F53E32] rounded-md  font-bold text-[#FFFFFF] w-full mt-4">
+                <button className="py-1 md:py-2 px-3 cursor-pointer bg-[#F53E32] rounded-md  font-bold text-[#FFFFFF] w-full mt-4">
                   Add To Cart
                 </button>
               </div>
