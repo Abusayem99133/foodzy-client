@@ -119,7 +119,7 @@ const DailyBestSells = () => {
           style={{ backgroundImage: `url(${bestSell})` }}
         >
           <h3 className="text-xl md:text-2xl font-semibold leading-snug">
-            Bring nature into your home
+            Bring nature into your homes
           </h3>
           <button className="btn bg-[#F53E32] outline-none mt-4 w-fit">
             Shop Now
